@@ -1,29 +1,45 @@
+ # Question 1
 def introduce():
     #input user information
-    first = str(input("Enter your first name: "))
-    second = str(input("Enter your second name: "))
-    third = str(input("Enter your third name: "))
+    full_name = str(input("Enter your full name: "))
     age = int(input("Enter your age: "))
+    gender = str(input("Enter your gender: "))
     course = str(input("Enter your course: "))
-    year = int(input("Enter your year of study: "))
-    address = str(input("Enter your address: "))
+    phone= str(input("Enter your Phone Number: "))
     hobby = str(input("Enter your hobby: "))
+    country=str(input("Enter your Country: "))
 
     #print output
-    print("My name is " + first + " " + second + " " + third + ". I am " + str(age) + " years old. I am studying " + course + " in year " + str(year) + ". I live in " + address + ". My hobby is " + hobby)
+    print("-----PERSONAL INFORMATION------")
+    print("Full Name: " + full_name)
+    print("Age:       " + str(age))
+    print("Gender:    " + gender)
+    print("Country:   " + country)
+    print("Phone:     " + phone)
+    print("Course:    " + course)
+    print("Hobby:     " + hobby)
+    
 
 # Call the function to get user information
 introduce()
 
+#Question2
 # Grade checking
-grade = int(input("Enter your grade: "))
-if grade >= 90:
-    print("Your grade is A")
+grade = int(input("Enter student`s marks: "))
+if grade < 0 or grade > 100:
+    print("Invalid Inputs, please enter between 0 to 100 ")
 elif grade >= 80:
-    print("Your grade is B")
+    print("students marks: " + str(grade))
+    print("Grade A")
 elif grade >= 70:
-    print("Your grade is C")
+    print("students marks: " + str(grade))
+    print("Grade B")
 elif grade >= 60:
-    print("Your grade is D")
+    print("students marks: " + str(grade))
+    print("Grade C")
+elif grade >= 50:
+    print("students marks: " + str(grade))
+    print("Grade D")
 else:
-    print("Your grade is F")
+    print("students marks: " + str(grade))
+    print("Grade F")
