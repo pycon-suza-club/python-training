@@ -1,12 +1,22 @@
-# 1. Function to Find the Area of a Rectangle
-def area_rectangle(length, width):
-    return length * width
+# 2. Function to Calculate BMI
+def calculate_bmi(weight, height):
+    return weight / (height ** 2)
 
-length = float(input("Enter length: "))
-width = float(input("Enter width: "))
-print("Area =", area_rectangle(length, width))
+weight = float(input("\nEnter weight (kg): "))
+height = float(input("Enter height (m): "))
 
-print("Test 1:", area_rectangle(5, 4))
-print("Test 2:", area_rectangle(10, 8))
-print("Test 3:", area_rectangle(7, 6))
+bmi = calculate_bmi(weight, height)
+print("BMI =", round(bmi, 2))
 
+if bmi < 18.5:
+    print("Category: Underweight")
+elif bmi < 25:
+    print("Category: Normal")
+elif bmi < 30:
+    print("Category: Overweight")
+else:
+    print("Category: Obese")
+
+print("Test 1:", round(calculate_bmi(50, 1.6), 2))
+print("Test 2:", round(calculate_bmi(70, 1.75), 2))
+print("Test 3:", round(calculate_bmi(90, 1.8), 2))
